@@ -1,0 +1,55 @@
+[TOC]
+
+
+
+
+
+
+
+####  Frist基本的使用（编译，编写简单java程序）
+
+- ![](https://kityminder-img.gz.bcebos.com/8826b77311cbcf6807f4b3345ed5ced9967b106e)
+
+- 关于两点猜测
+  - 编译器本身的问题？
+  - 文件结构上出了问题？
+  - 代码编写上出了问题？
+- $final$
+  - 文件结构出现了问题；上面出现的情况之前，我自己定义了一个文件，然后把他命名为java，然后就开始写了。可能是文件没有出现在正确的位置。
+
+####$second$ 怎么格式化代码？
+
+- Ctrl + shitf +  F
+- 可能可以自己定义一下快捷键，还得以后再说这个问题。
+
+
+
+------
+
+#### $\\\large 软件使用过程中遇到的些许问题：$
+
+#### 重装一次jdk之后，软件发现编译运行不了了。
+
+- 处理方案重装一次，esplise，非常快，保留关于安装包资源即可，一键安装。
+
+--------
+
+#### 解决软件乱码的问题
+
+-  第一步：首先，打开Eclipse软件，选中项目并点击【鼠标右键】->【Properties】功能。
+- 第二步：然后，在【Resource】->【Text file encoding】中设置代码编码为【UTF-8】。
+- 第三步：最后，点击【Apply】即可解决Eclipse项目乱码问题。
+
+##### 即使进行了上述步骤，输出依然出现乱码问题：
+
+网址： [ad](https://www.javatt.com/p/66105#:~:text=%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%EF%BC%8C%E9%9C%80%E8%A6%81%E6%9B%B4%E6%8D%A2jdk%E6%88%96%E8%80%85jre%E3%80%82%20%E5%85%B6%E6%AC%A1%EF%BC%8C%E5%9C%A8eclipse%E9%87%8C%E9%9D%A2%EF%BC%8Cwindows-%3Epreferences-%3EGeneral-%3EContentTypes%EF%BC%8C%E5%B1%95%E5%BC%80Text%E6%A0%91%EF%BC%8C%E6%89%BE%E5%88%B0JavaSource%20Files%2C%E5%9C%A8DefaultEncoding%E9%87%8C%E9%9D%A2%20%E5%86%99%E4%B8%8A,GB2312%E5%8D%B3%E5%8F%AF%E3%80%82%20%E5%A6%82%E6%9E%9C%E8%BF%98%E4%B8%8D%E8%A1%8C%EF%BC%8C%E5%86%8D%E8%AF%95%E9%AA%8C%E4%B8%80%E4%B8%8B%E6%9F%90%E4%B8%AA%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6%EF%BC%8C%E5%8F%B3%E9%94%AE%2C%20properties-%3EResource%2C%20%E2%80%9CTextfile%20encoding%E2%80%9D%E4%BF%AE%E6%94%B9%E6%88%90GBK%2C%E6%88%96%E8%80%85GB2312.)
+
+- [windows]->[preferences]->[General]->[ConrentTypes]->[Text树]->[ContentTypes]  (写上gb2312)
+- useful
+
+#### 打开资源视图
+
+- window->view->project exploer
+
+
+

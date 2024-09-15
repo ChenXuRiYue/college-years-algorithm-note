@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64CD27FC-CDE7-44DB-9330-AE3C7B153FA6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UVA_Arena</RootNamespace>
+    <AssemblyName>UVA Arena</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <PublishUrl>C:\Users\Dipu\Projects\UVA-Arena\setup\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <SupportUrl>https://github.com/dipu-bd/UVA-Arena</SupportUrl>
+    <ProductName>UVA Arena</ProductName>
+    <PublisherName>Sudipto Chandra</PublisherName>
+    <ApplicationRevision>84</ApplicationRevision>
+    <ApplicationVersion>1.9.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>main.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>UVA_Arena.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>015CC01A557AF7B4897913BBDDD27546DB574545</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ClassData\Basic\Config.cs" />
+    <Compile Include="ClassData\Models\CategoryNode.cs" />
+    <Compile Include="ClassData\Models\DownloadTask.cs" />
+    <Compile Include="ClassData\Models\UserInfo.cs" />
+    <Compile Include="ClassData\Models\UserRanklist.cs" />
+    <Compile Include="ClassData\Utilities\uDebugClient.cs" />
+    <Compile Include="ClassData\Utilities\UpdateCheck.cs" />
+    <Compile Include="ClassData\Utilities\WebBrowserHelper.cs" />
+    <Compile Include="ClassData\Utilities\CodeCompiler.cs" />
+    <Compile Include="ClassData\Utilities\Internet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassData\Models\UserSubmissions.cs" />
+    <Compile Include="ClassData\Utilities\DataCompressor.cs" />
+    <Compile Include="Components\PDFViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\CodesBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\CodesBrowser.Designer.cs">
+      <DependentUpon>CodesBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CompareUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\CompareUsers.Designer.cs">
+      <DependentUpon>CompareUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CustomWebBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CustomWebBrowser.Designer.cs">
+      <DependentUpon>CustomWebBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\JUDGE_STATUS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\JUDGE_STATUS.Designer.cs">
+      <DependentUpon>JUDGE_STATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassData\Utilities\DiffFileMerger.cs" />
+    <Compile Include="ClassData\Utilities\FileOperations.cs" />
+    <Compile Include="ClassData\Utilities\HighlightSyntax.cs" />
+    <Compile Include="ClassData\Utilities\NativeMethods.cs" />
+    <Compile Include="Components\CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\CueTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\NativeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\CustomSplitContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\CustomStatusButton.cs" />
+    <Compile Include="Components\NativeTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\SearchBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SearchBox.Designer.cs">
+      <DependentUpon>SearchBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CODES.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\CODES.Designer.cs">
+      <DependentUpon>CODES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PROBLEMS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\PROBLEMS.Designer.cs">
+      <DependentUpon>PROBLEMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProblemViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ProblemViewer.Designer.cs">
+      <DependentUpon>ProblemViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserProgTracker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\UserProgTracker.Designer.cs">
+      <DependentUpon>UserProgTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\USER_STAT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\USER_STAT.Designer.cs">
+      <DependentUpon>USER_STAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\CheckUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\CheckUpdateForm.Designer.cs">
+      <DependentUpon>CheckUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\ClosingDialogueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\ClosingDialogueForm.Designer.cs">
+      <DependentUpon>ClosingDialogueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\ProblemCategoryViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\ProblemCategoryViewer.Designer.cs">
+      <DependentUpon>ProblemCategoryViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\SelectALanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SelectALanguage.Designer.cs">
+      <DependentUpon>SelectALanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\DownloadAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\DownloadAllForm.Designer.cs">
+      <DependentUpon>DownloadAllForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\HelpAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\HelpAbout.Designer.cs">
+      <DependentUpon>HelpAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\LoggerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\LoggerForm.Designer.cs">
+      <DependentUpon>LoggerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\SubmitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SubmitForm.Designer.cs">
+      <DependentUpon>SubmitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\UsernameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\UsernameForm.Designer.cs">
+      <DependentUpon>UsernameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinForms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassData\Basic\Functions.cs" />
+    <Compile Include="ClassData\Basic\Interactivity.cs" />
+    <Compile Include="ClassData\Basic\LocalDirectory.cs" />
+    <Compile Include="ClassData\Utilities\Logger.cs" />
+    <Compile Include="ClassData\Models\ProblemInfo.cs" />
+    <Compile Include="ClassData\Basic\RegistryAccess.cs" />
+    <Compile Include="ClassData\Basic\LocalDatabase.cs" />
+    <Compile Include="ClassData\Utilities\Stylish.cs" />
+    <Compile Include="ClassData\Models\JudgeStatus.cs" />
+    <Compile Include="ClassData\Utilities\TaskQueue.cs" />
+    <Compile Include="ClassData\Utilities\UnixTimeStamp.cs" />
+    <Compile Include="Settings.cs" />
+    <Content Include="pdf.js\build\pdf.js" />
+    <Content Include="pdf.js\build\pdf.worker.js" />
+    <Content Include="pdf.js\web\compatibility.js" />
+    <Content Include="pdf.js\web\debugger.js" />
+    <Content Include="pdf.js\web\images\annotation-check.svg" />
+    <Content Include="pdf.js\web\images\annotation-comment.svg" />
+    <Content Include="pdf.js\web\images\annotation-help.svg" />
+    <Content Include="pdf.js\web\images\annotation-insert.svg" />
+    <Content Include="pdf.js\web\images\annotation-key.svg" />
+    <Content Include="pdf.js\web\images\annotation-newparagraph.svg" />
+    <Content Include="pdf.js\web\images\annotation-noicon.svg" />
+    <Content Include="pdf.js\web\images\annotation-note.svg" />
+    <Content Include="pdf.js\web\images\annotation-paragraph.svg" />
+    <Content Include="pdf.js\web\images\findbarButton-next%402x.png" />
+    <Content Include="pdf.js\web\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="pdf.js\web\images\findbarButton-next-rtl.png" />
+    <Content Include="pdf.js\web\images\findbarButton-next.png" />
+    <Content Include="pdf.js\web\images\findbarButton-previous%402x.png" />
+    <Content Include="pdf.js\web\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="pdf.js\web\images\findbarButton-previous-rtl.png" />
+    <Content Include="pdf.js\web\images\findbarButton-previous.png" />
+    <Content Include="pdf.js\web\images\grab.cur" />
+    <Content Include="pdf.js\web\images\grabbing.cur" />
+    <Content Include="pdf.js\web\images\loading-icon.gif" />
+    <Content Include="pdf.js\web\images\loading-small%402x.png" />
+    <Content Include="pdf.js\web\images\loading-small.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="pdf.js\web\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="pdf.js\web\images\shadow.png" />
+    <Content Include="pdf.js\web\images\texture.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-bookmark.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-download%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-download.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-menuArrows.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-openFile%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-openFile.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-pageDown.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-pageUp.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-presentationMode.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-print%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-print.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-search%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-search.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-viewAttachments.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-viewOutline.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-zoomIn.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="pdf.js\web\images\toolbarButton-zoomOut.png" />
+    <Content Include="pdf.js\web\images\treeitem-collapsed%402x.png" />
+    <Content Include="pdf.js\web\images\treeitem-collapsed-rtl%402x.png" />
+    <Content Include="pdf.js\web\images\treeitem-collapsed-rtl.png" />
+    <Content Include="pdf.js\web\images\treeitem-collapsed.png" />
+    <Content Include="pdf.js\web\images\treeitem-expanded%402x.png" />
+    <Content Include="pdf.js\web\images\treeitem-expanded.png" />
+    <Content Include="pdf.js\web\l10n.js" />
+    <Content Include="pdf.js\web\viewer.css" />
+    <Content Include="pdf.js\web\viewer.html" />
+    <Content Include="pdf.js\web\viewer.js" />
+    <None Include="pdf.js\LICENSE" />
+    <None Include="pdf.js\web\cmaps\78-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\78-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\78-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\78-RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\78-RKSJ-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\78-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\78ms-RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\78ms-RKSJ-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\83pv-RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\90ms-RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\90ms-RKSJ-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\90msp-RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\90msp-RKSJ-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\90pv-RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\90pv-RKSJ-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\Add-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\Add-RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\Add-RKSJ-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\Add-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-CNS1-0.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-CNS1-1.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-CNS1-2.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-CNS1-3.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-CNS1-4.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-CNS1-5.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-CNS1-6.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-GB1-0.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-GB1-1.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-GB1-2.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-GB1-3.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-GB1-4.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-GB1-5.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Japan1-0.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Japan1-1.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Japan1-2.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Japan1-3.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Japan1-4.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Japan1-5.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Japan1-6.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Korea1-0.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Korea1-1.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Korea1-2.bcmap" />
+    <None Include="pdf.js\web\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <None Include="pdf.js\web\cmaps\B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\B5pc-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\B5pc-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\CNS-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\CNS-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\CNS1-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\CNS1-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\CNS2-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\CNS2-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\ETen-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\ETen-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\ETenms-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\ETenms-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\ETHK-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\ETHK-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\Ext-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\Ext-RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\Ext-RKSJ-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\Ext-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GB-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GB-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GB-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GB-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBK-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBK-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBK2K-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBK2K-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBKp-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBKp-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBpc-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBpc-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBT-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBT-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBT-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBT-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBTpc-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\GBTpc-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\H.bcmap" />
+    <None Include="pdf.js\web\cmaps\Hankaku.bcmap" />
+    <None Include="pdf.js\web\cmaps\Hiragana.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKdla-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKdla-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKdlb-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKdlb-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKgccs-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKgccs-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKm314-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKm314-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKm471-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKm471-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKscs-B5-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\HKscs-B5-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\Katakana.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSC-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSC-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSC-Johab-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSC-Johab-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSCms-UHC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSCms-UHC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSCpc-EUC-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\KSCpc-EUC-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\LICENSE" />
+    <None Include="pdf.js\web\cmaps\NWP-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\NWP-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\RKSJ-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\RKSJ-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\Roman.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniCNS-UCS2-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniCNS-UCS2-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniCNS-UTF16-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniCNS-UTF16-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniCNS-UTF32-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniCNS-UTF32-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniCNS-UTF8-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniCNS-UTF8-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniGB-UCS2-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniGB-UCS2-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniGB-UTF16-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniGB-UTF16-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniGB-UTF32-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniGB-UTF32-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniGB-UTF8-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniGB-UTF8-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UCS2-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UCS2-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UTF16-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UTF16-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UTF32-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UTF32-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UTF8-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS-UTF8-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniKS-UCS2-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniKS-UCS2-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniKS-UTF16-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniKS-UTF16-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniKS-UTF32-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniKS-UTF32-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniKS-UTF8-H.bcmap" />
+    <None Include="pdf.js\web\cmaps\UniKS-UTF8-V.bcmap" />
+    <None Include="pdf.js\web\cmaps\V.bcmap" />
+    <None Include="pdf.js\web\cmaps\WP-Symbol.bcmap" />
+    <None Include="pdf.js\web\locale\ach\viewer.properties" />
+    <None Include="pdf.js\web\locale\af\viewer.properties" />
+    <None Include="pdf.js\web\locale\ak\viewer.properties" />
+    <None Include="pdf.js\web\locale\an\viewer.properties" />
+    <None Include="pdf.js\web\locale\ar\viewer.properties" />
+    <None Include="pdf.js\web\locale\ast\viewer.properties" />
+    <None Include="pdf.js\web\locale\as\viewer.properties" />
+    <None Include="pdf.js\web\locale\az\viewer.properties" />
+    <None Include="pdf.js\web\locale\be\viewer.properties" />
+    <None Include="pdf.js\web\locale\bg\viewer.properties" />
+    <None Include="pdf.js\web\locale\bn-BD\viewer.properties" />
+    <None Include="pdf.js\web\locale\bn-IN\viewer.properties" />
+    <None Include="pdf.js\web\locale\br\viewer.properties" />
+    <None Include="pdf.js\web\locale\bs\viewer.properties" />
+    <None Include="pdf.js\web\locale\ca\viewer.properties" />
+    <None Include="pdf.js\web\locale\csb\viewer.properties" />
+    <None Include="pdf.js\web\locale\cs\viewer.properties" />
+    <None Include="pdf.js\web\locale\cy\viewer.properties" />
+    <None Include="pdf.js\web\locale\da\viewer.properties" />
+    <None Include="pdf.js\web\locale\de\viewer.properties" />
+    <None Include="pdf.js\web\locale\el\viewer.properties" />
+    <None Include="pdf.js\web\locale\en-GB\viewer.properties" />
+    <None Include="pdf.js\web\locale\en-US\viewer.properties" />
+    <None Include="pdf.js\web\locale\en-ZA\viewer.properties" />
+    <None Include="pdf.js\web\locale\eo\viewer.properties" />
+    <None Include="pdf.js\web\locale\es-AR\viewer.properties" />
+    <None Include="pdf.js\web\locale\es-CL\viewer.properties" />
+    <None Include="pdf.js\web\locale\es-ES\viewer.properties" />
+    <None Include="pdf.js\web\locale\es-MX\viewer.properties" />
+    <None Include="pdf.js\web\locale\et\viewer.properties" />
+    <None Include="pdf.js\web\locale\eu\viewer.properties" />
+    <None Include="pdf.js\web\locale\fa\viewer.properties" />
+    <None Include="pdf.js\web\locale\ff\viewer.properties" />
+    <None Include="pdf.js\web\locale\fi\viewer.properties" />
+    <None Include="pdf.js\web\locale\fr\viewer.properties" />
+    <None Include="pdf.js\web\locale\fy-NL\viewer.properties" />
+    <None Include="pdf.js\web\locale\ga-IE\viewer.properties" />
+    <None Include="pdf.js\web\locale\gd\viewer.properties" />
+    <None Include="pdf.js\web\locale\gl\viewer.properties" />
+    <None Include="pdf.js\web\locale\gu-IN\viewer.properties" />
+    <None Include="pdf.js\web\locale\he\viewer.properties" />
+    <None Include="pdf.js\web\locale\hi-IN\viewer.properties" />
+    <None Include="pdf.js\web\locale\hr\viewer.properties" />
+    <None Include="pdf.js\web\locale\hu\viewer.properties" />
+    <None Include="pdf.js\web\locale\hy-AM\viewer.properties" />
+    <None Include="pdf.js\web\locale\id\viewer.properties" />
+    <None Include="pdf.js\web\locale\is\viewer.properties" />
+    <None Include="pdf.js\web\locale\it\viewer.properties" />
+    <None Include="pdf.js\web\locale\ja\viewer.properties" />
+    <None Include="pdf.js\web\locale\ka\viewer.properties" />
+    <None Include="pdf.js\web\locale\kk\viewer.properties" />
+    <None Include="pdf.js\web\locale\km\viewer.properties" />
+    <None Include="pdf.js\web\locale\kn\viewer.properties" />
+    <None Include="pdf.js\web\locale\ko\viewer.properties" />
+    <None Include="pdf.js\web\locale\ku\viewer.properties" />
+    <None Include="pdf.js\web\locale\lg\viewer.properties" />
+    <None Include="pdf.js\web\locale\lij\viewer.properties" />
+    <None Include="pdf.js\web\locale\locale.properties" />
+    <None Include="pdf.js\web\locale\lt\viewer.properties" />
+    <None Include="pdf.js\web\locale\lv\viewer.properties" />
+    <None Include="pdf.js\web\locale\mai\viewer.properties" />
+    <None Include="pdf.js\web\locale\mk\viewer.properties" />
+    <None Include="pdf.js\web\locale\ml\viewer.properties" />
+    <None Include="pdf.js\web\locale\mn\viewer.properties" />
+    <None Include="pdf.js\web\locale\mr\viewer.properties" />
+    <None Include="pdf.js\web\locale\ms\viewer.properties" />
+    <None Include="pdf.js\web\locale\my\viewer.properties" />
+    <None Include="pdf.js\web\locale\nb-NO\viewer.properties" />
+    <None Include="pdf.js\web\locale\nl\viewer.properties" />
+    <None Include="pdf.js\web\locale\nn-NO\viewer.properties" />
+    <None Include="pdf.js\web\locale\nso\viewer.properties" />
+    <None Include="pdf.js\web\locale\oc\viewer.properties" />
+    <None Include="pdf.js\web\locale\or\viewer.properties" />
+    <None Include="pdf.js\web\locale\pa-IN\viewer.properties" />
+    <None Include="pdf.js\web\locale\pl\viewer.properties" />
+    <None Include="pdf.js\web\locale\pt-BR\viewer.properties" />
+    <None Include="pdf.js\web\locale\pt-PT\viewer.properties" />
+    <None Include="pdf.js\web\locale\rm\viewer.properties" />
+    <None Include="pdf.js\web\locale\ro\viewer.properties" />
+    <None Include="pdf.js\web\locale\ru\viewer.properties" />
+    <None Include="pdf.js\web\locale\rw\viewer.properties" />
+    <None Include="pdf.js\web\locale\sah\viewer.properties" />
+    <None Include="pdf.js\web\locale\si\viewer.properties" />
+    <None Include="pdf.js\web\locale\sk\viewer.properties" />
+    <None Include="pdf.js\web\locale\sl\viewer.properties" />
+    <None Include="pdf.js\web\locale\son\viewer.properties" />
+    <None Include="pdf.js\web\locale\sq\viewer.properties" />
+    <None Include="pdf.js\web\locale\sr\viewer.properties" />
+    <None Include="pdf.js\web\locale\sv-SE\viewer.properties" />
+    <None Include="pdf.js\web\locale\sw\viewer.properties" />
+    <None Include="pdf.js\web\locale\ta-LK\viewer.properties" />
+    <None Include="pdf.js\web\locale\ta\viewer.properties" />
+    <None Include="pdf.js\web\locale\te\viewer.properties" />
+    <None Include="pdf.js\web\locale\th\viewer.properties" />
+    <None Include="pdf.js\web\locale\tl\viewer.properties" />
+    <None Include="pdf.js\web\locale\tn\viewer.properties" />
+    <None Include="pdf.js\web\locale\tr\viewer.properties" />
+    <None Include="pdf.js\web\locale\uk\viewer.properties" />
+    <None Include="pdf.js\web\locale\ur\viewer.properties" />
+    <None Include="pdf.js\web\locale\vi\viewer.properties" />
+    <None Include="pdf.js\web\locale\wo\viewer.properties" />
+    <None Include="pdf.js\web\locale\xh\viewer.properties" />
+    <None Include="pdf.js\web\locale\zh-CN\viewer.properties" />
+    <None Include="pdf.js\web\locale\zh-TW\viewer.properties" />
+    <None Include="pdf.js\web\locale\zu\viewer.properties" />
+    <None Include="Resources\failed.png" />
+    <EmbeddedResource Include="Pages\CodesBrowser.resx">
+      <DependentUpon>CodesBrowser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CustomWebBrowser.resx">
+      <DependentUpon>CustomWebBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SearchBox.resx">
+      <DependentUpon>SearchBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\CODES.resx">
+      <DependentUpon>CODES.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\CompareUsers.resx">
+      <DependentUpon>CompareUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PROBLEMS.resx">
+      <DependentUpon>PROBLEMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProblemViewer.resx">
+      <DependentUpon>ProblemViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\JUDGE_STATUS.resx">
+      <DependentUpon>JUDGE_STATUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserProgTracker.resx">
+      <DependentUpon>UserProgTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\USER_STAT.resx">
+      <DependentUpon>USER_STAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\CheckUpdateForm.resx">
+      <DependentUpon>CheckUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\ClosingDialogueForm.resx">
+      <DependentUpon>ClosingDialogueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\ProblemCategoryViewer.resx">
+      <DependentUpon>ProblemCategoryViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\SelectALanguage.resx">
+      <DependentUpon>SelectALanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\DownloadAllForm.resx">
+      <DependentUpon>DownloadAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\HelpAbout.resx">
+      <DependentUpon>HelpAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\LoggerForm.resx">
+      <DependentUpon>LoggerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\SubmitForm.resx">
+      <DependentUpon>SubmitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\UsernameForm.resx">
+      <DependentUpon>UsernameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <Content Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\..\lib\FastColoredTextBox.DLL</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\..\lib\ObjectListView.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\lib\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

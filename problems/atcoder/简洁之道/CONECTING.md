@@ -1,0 +1,1 @@
+ [atcoder_RANDOM.md](..\..\..\代码整洁之道\同一想法，不同实现\atcoder_RANDOM.md) 

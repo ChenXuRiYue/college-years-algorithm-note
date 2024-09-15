@@ -1,0 +1,1317 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/*
+fonts initalization
+*/
+@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap);
+@page {
+	size: A4;
+	margin: 8mm 0mm;
+}
+
+/*
+	核心配置区
+*/
+:root {
+	/*
+		字体
+	*/
+	--sans-serif-font: "Noto Sans SC Medium", "Noto Sans SC", sans-serif;
+	--monospace-font: "Source Code Pro Regular", "Source Code Pro", monospace;
+	
+	/*
+		基础颜色区：供宏观配置区使用，不可直接由专项配置区或具体元素使用
+	*/
+	--color-black-light: #969696;
+	--color-black-deep: #333333;
+	--color-black: #000000;
+	--color-red: #FF0000;
+	--color-yellow: #ffff00;
+	--color-gray-light: #d3d3d3;
+	--color-gray: #c0c0c0;
+	--color-gray-deep: #a9a9a9;
+	--color-gray-most: #808080;
+	--color-white: #FFFFFF;
+	--color-white-snow: #fffafa;
+	--color-white-honey: #f0fff0;
+	--color-white-ice: #f5fffa;
+	--color-white-azure: #f0ffff;
+	--color-white-mi: #fffff0;
+	--color-blue: #04BAFB;
+	--color-blue-tiny: #F5FDFD;
+	--color-blue-light: #D6FCFD;
+	--color-blue-deep: #ADE8FD;
+	--color-green-deep: #282C34;
+	
+	
+	/*
+		宏观配置区：供专项配置区使用，不可由具体元素直接调用
+		此区域为用户自定义主题全局配置区域
+		
+	=============================本文件内，只允许修改被本分割线包围的配色方案，不同的配色方案会有不同的主题效果；变量具体的实际意义可根据英文翻译合理猜理解；其余内容禁止修改=============================*/
+		
+	
+	--color-context-background: var(--color-white);
+	--color-context-text: var(--color-black-deep);
+	--color-menu-background: var(--color-white-ice);
+	--color-menu-outline-text: var(--color-black);
+	--color-menu-file-list-text: var(--color-black);
+	--color-aux-one: var(--color-blue);
+	--color-aux-two: var(--color-blue-light);
+	--color-code: var(--color-white);
+	--color-code-background: var(--color-green-deep);
+	--color-shadow: var(--color-black-light);
+	--color-reference: var(--color-gray-deep);
+	--color-placeholder: var(--color-blue-deep);
+	--color-mark: var(--color-yellow);
+	--color-del: var(--color-red);
+	
+	/* 主题二 */
+	/*
+	--color-aux-one: #14B6F6;
+	--color-aux-two: #85E0FF;
+	--color-context-background: #DAF5FF;
+	--color-context-text: #000000;
+	--color-menu-background: #85E0FF;
+	--color-menu-outline-text: #000000;
+	--color-menu-file-list-text: #96959E;
+	--color-code: #96959E;
+	--color-code-background: var(--color-green-deep);
+	--color-shadow: var(--color-black-light);
+	--color-reference: var(--color-gray-deep);
+	--color-placeholder: var(--color-menu-outline-text);
+	--color-mark: var(--color-yellow);
+	--color-del: var(--color-red);
+	*/
+	
+	/* ========================================================== */
+	
+	
+	/*
+		专项配置区：供具体元素直接调用
+	*/
+	--context-background-color: var(--color-context-background);
+	--context-text-color: var(--color-context-text);
+	--menu-background-color: var(--color-menu-background);
+	--menu-outline-text-color: var(--color-menu-outline-text);
+	--menu-file-list-text-color: var(--color-menu-file-list-text);
+	--active-file-bg-color: var(--selection-color);
+	--active-file-border-color: var(--border-color);
+	--active-file-text-color: var(--selection-menu-file-color);
+	--h-sign: var(--color-aux-one);
+	--h-sign-aux: var(--color-aux-two);
+	--table-border-color: var(--border-color);
+	--tr-bg-color: var(--color-aux-two);
+	--tr-hover-bg-color: var(--selection-background-color);
+	--th-bg-color: var(--color-aux-two);
+	--selection-color: var(--color-context-background);
+	--selection-background-color: var(--color-aux-one);
+	--selection-menu-file-color: var(--color-aux-one);
+	--selection-bg-color: var(--selection-background-color);
+	--selection-text-color: var(--selection-color);
+	--select-text-bg-color: var(--selection-background-color);
+	--select-text-font-color: var(--selection-color);
+	--search-select-background-color: var(--menu-background-color);
+    --search-select-text-color: var(--color-aux-two);
+    --search-select-background-hover-color: var(--color-context-background);
+    --search-select-text-hover-color: var(--color-aux-one);
+    /* 特有属性，typora直接支持：内容区搜索当前选中背景 */
+    --search-select-bg-color: var(--selection-background-color);
+    --split-color: var(--color-aux-two);
+    --scrollbar-color : var(--color-aux-two);
+    --scrollbar-hover-color: var(--color-aux-one);
+    --a-color: var(--selection-color);
+    --a-hover-color: var(--selection-background-color);
+    --mark-color: var(--color-yellow);
+	--del-color: var(--color-red);
+    --code-background-color: var(--color-code-background);
+    --code-color: var(--color-code);
+    --border-color: var(--color-aux-one);
+    --shadow-color: var(--color-shadow);
+    --reference-color: var(--color-reference);
+    --placeholder-color: var(--color-placeholder);
+    --block-shadow: 0.15rem 0.15rem 0.5rem var(--color-shadow);
+}
+
+html {
+	font-size: 16px;
+	background-color: var(--context-background-color);
+	color: var(--context-text-color);
+}
+
+/*
+	写区
+*/
+#write {
+	background-color: var(--context-background-color);
+	color: var(--context-text-color);
+}
+
+/*
+	导航栏区 与 写区 的分界线
+*/
+#typora-sidebar-resizer {
+	background-color: var(--menu-background-color);
+    color: var(--menu-background-color);
+}
+
+/*
+	导航区 / 侧栏
+*/
+#typora-sidebar {
+	background-color: var(--menu-background-color);
+    color: var(--menu-outline-text-color);
+}
+
+/*
+	导航栏 / 侧栏 大纲区
+*/
+#sidebar-content {
+	background-color: var(--menu-background-color);
+    color: var(--menu-outline-text-color);
+}
+
+/*
+	导航栏文件列表样式
+*/
+#file-library-list-children {
+	border-bottom: 1px solid var(--split-color);
+	color: var(--menu-file-list-text-color);
+	background-color: var(--menu-background-color);
+}
+
+/*
+	隐藏导航栏文件列表中的每个文件的详细信息
+*/
+.file-list-item-summary {
+	display: none;
+	visibility: hidden;
+}
+
+/*
+	设置大纲内容被选中的颜色
+*/
+.outline-item-active {
+	color: var(--selection-background-color);
+}
+
+/*
+	导航栏大纲切换样式
+*/
+#info-panel-tab-outline {
+	color: var(--selection-background-color);
+}
+
+/*
+	导航栏文件切换样式
+*/
+#info-panel-tab-file {
+	color: var(--selection-background-color);
+}
+
+/*
+	导航栏从文件鼠标滚动至文件查找样式
+*/
+#info-panel-tab-search {
+	color: var(--selection-background-color);
+}
+
+/*
+	导航栏搜索框外围
+*/
+#file-library-search {
+	height: 60px;
+}
+
+/*
+	导航栏搜索输入框外围
+*/
+#file-library-search-panel {
+	margin-top:10px;
+}
+
+/*
+	隐藏导航栏搜索框的关闭按钮
+*/
+#close-outline-filter-btn {
+	display: none;
+	visibility: hidden;
+}
+
+/*
+	导航栏搜索输入框
+*/
+#file-library-search-input {
+	outline-style: none ;
+    border: 1px solid var(--selection-background-color);
+    border-radius: 5px;
+    padding: 15px 15px;
+    color: var(--search-select-text-color);
+    background: var(--search-select-background-color);
+}
+#file-library-search-input:focus{
+	background-color: var(--search-select-background-hover-color);
+	color: var(--search-select-text-hover-color);
+    border-color: var(--border-color);
+    outline: 0;
+    -webkit-box-shadow: inset 0 0px 6px var(--border-color),0 0 6px var(--border-color);
+    box-shadow: inset 0 0px 6px var(--border-color),0 0 6px var(--border-color);
+}
+/*
+	导航栏搜索框提示语字体样式
+*/
+input::-webkit-input-placeholder {
+	color: var(--placeholder-color);
+}
+
+/*
+	内容区（写区）全局搜索集体选中（非当前选中）样式
+*/
+.md-search-hit {
+    color: var(--menu-outline-text-color);
+    background-color: var(--selection-background-color);
+}
+
+#write {
+	font-family: var(--sans-serif-font);
+	max-width: 60rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+/*
+	鼠标悬浮在导航栏任意菜单上后菜单的样式
+*/
+.outline-item:hover {
+    color: var(--selection-background-color);
+    background-color: var(--menu-background-color);
+}
+
+/*
+	去掉 鼠标悬浮时导航栏的下划线
+*/
+.outline-label:hover {
+    text-decoration: none;
+}
+
+/*
+	yaml header settings
+	YAML Front Matter
+
+	YAML
+	YAML是YAML Ain't Markup Language递归缩写，即YAML不是标记语言的意思
+	YAML是便于人阅读基于unicode编码的各种语言的序列号标准。它的用途广泛，用于配置文件，日志文件，跨语言数据共享，对象持久化，复杂的数据结构
+
+	Front Matter 
+	前言；前文部分
+	在YAML Front Matter中可以表明文章的信息（方便各种语言获取），设置一些环境中的格式，定义一些变量，甚至自定义一些变量（方便在不同语言环境下，达到想要的效果）
+*/
+#write pre.md-meta-block {
+	font-family: var(--monospace-font);
+	font-size: 1rem;
+	text-align: left;
+	padding: 0.6rem;
+	color: var(--code-color);
+	background-color: var(--code-background-color);
+	border-radius: 0.4rem;
+}
+
+/*
+	headers settings
+*/
+#write h1 {
+	font-size: 2.2rem;
+	text-align: center;
+	text-shadow: 0.15rem 0.15rem 0.3rem var(--shadow-color);
+}
+#write h2 {
+	font-size: 1.8rem;
+	margin-top: 1.8rem;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+	background-color: var(--h-sign-aux);
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-left: 0.5rem solid var(--h-sign);
+	border-right: 0.5rem solid var(--h-sign);
+	/*指定背景为椭圆*/
+	border-radius: 0.4rem;
+}
+#write h3 {
+	margin-left: 0rem;
+	font-size: 1.6rem;
+}
+h3:before {
+	/*标题左边logo中的文本*/
+	content: "*";
+	text-align: center;
+	/*设置 logo 垂直居中 要与字体高度一致方可*/
+	line-height: 1.6rem;
+	/*确保标题和logo在同一行*/
+	display: inline-block;
+	/*标题与logo间距*/
+	margin-right: 0.2em;
+	width: 1.6rem;
+	height: 1.6rem;
+	color: var(--h-sign);
+	background: var(--h-sign);
+}
+
+#write h4 {
+	margin-left: 1rem;
+	font-size: 1.5rem;
+}
+h4:before {
+	/*标题左边logo中的文本*/
+	content: "*";
+	text-align: center;
+	/*设置 logo 垂直居中 要与字体高度一致方可*/
+	line-height: 1.5rem;
+	/*确保标题和logo在同一行*/
+	display: inline-block;
+	/*标题与logo间距*/
+	margin-right: 0.2em;
+	/*border-radius: 50%;*/
+	width: 1.5rem;
+	height: 1.5rem;
+	color: var(--h-sign-aux);
+	background: var(--h-sign-aux);
+}
+
+#write h5 {
+	margin-left: 2rem;
+	font-size: 1.4rem;
+}
+h5:before {
+	/*标题左边logo中的文本*/
+	content: "*";
+	text-align: center;
+	/*设置 logo 垂直居中 要与字体高度一致方可*/
+	line-height: 1.4rem;
+	/*确保标题和logo在同一行*/
+	display: inline-block;
+	/*标题与logo间距*/
+	margin-right: 0.2em;
+	border-radius: 50%;
+	width: 1.4rem;
+	height: 1.4rem;
+	color: var(--h-sign);
+	background: var(--h-sign);
+}
+
+#write h6 {
+	margin-left: 3rem;
+	font-size: 1.3rem;
+}
+h6:before {
+	/*标题左边logo中的文本*/
+	content: "*";
+	text-align: center;
+	/*设置 logo 垂直居中 要与字体高度一致方可*/
+	line-height: 1.3rem;
+	/*确保标题和logo在同一行*/
+	display: inline-block;
+	/*标题与logo间距*/
+	margin-right: 0.2em;
+	border-radius: 50%;
+	width: 1.3rem;
+	height: 1.3rem;
+	color: var(--h-sign-aux);
+	background: var(--h-sign-aux);
+}
+
+/*
+	表格设置
+*/
+#write table {
+	border-collapse: collapse;
+}
+#write table thead th{
+	background-color: var(--table-border-color);
+	color: var(--color-context-background);
+}
+#write table th {
+	background-color: var(--th-bg-color);
+}
+#write table th, td {
+	text-align: center;
+	padding: 0.5rem;
+}
+#write table td {
+	border-left: 0.1rem solid var(--table-border-color);
+	border-right: 0.1rem solid var(--table-border-color);
+}
+#write table tbody tr:nth-child(even) {
+	background-color: var(--tr-bg-color);
+}
+#write table tbody tr:hover {
+	background-color: var(--tr-hover-bg-color);
+	color: var(--tr-bg-color);
+}
+
+/*
+	无序列表样式
+*/
+#write ul li {
+  list-style: none;
+  -webkit-transition: .12s;
+          transition: .12s;
+}
+#write ul li:hover {
+  color: var(--selection-background-color);
+}	
+/*
+	为了区分无序列表和任务列表特意加入了属性选择器
+*/
+#write ul li[class=md-list-item]::before {
+  position: absolute;
+  content: '\2022';
+  font-family: Arial;
+  color: var(--selection-background-color);
+  text-align: center;
+  font-size: 2em;
+  opacity: .5;
+  line-height: .75;
+  -webkit-transition: .5s;
+          transition: .5s;
+}
+#write ul li:hover::before {
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  opacity: 1;
+  text-shadow: 0 0 4px;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+/*
+	有序列表样式
+*/
+#write ol li {
+}
+#write ol li:hover {
+  color: var(--selection-background-color);
+}	
+#write ol li::before {
+  content: '';
+}
+#write ol li:hover::before {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  background: var(--selection-background-color);
+}
+
+/*
+	任务列表设置
+	单选框设置
+*/
+#write .task-list-item input[type = "checkbox"] {
+	width: 0;
+	height: 0;
+}
+
+/*
+	选中以前的边框样式
+*/
+#write .task-list-item input[type = "checkbox"]::before, #write input[type = "checkbox"]:checked::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-left: 4rem;
+	left: -0.15rem;
+	top: -0.41rem;
+	width: 0.8rem;
+	height: 0.8rem;
+	border: 0.1rem solid var(--selection-background-color);
+	border-radius: 50%;
+	transition: all 0.2s;
+}
+
+/*
+	选中以前，鼠标悬浮于选中框时，选中框中间点的样式
+*/
+#write .task-list-item input[type='checkbox']:hover::before {
+	transition: all 0.2s;
+	background-color: var(--selection-background-color);
+}
+
+/*
+	选中以后选中框中间点的样式
+*/
+#write .task-list-item input[type = "checkbox"]:checked::before {
+	padding: 0.1rem;
+	background-clip: content-box;
+	background-color: var(--selection-background-color);
+}
+
+/*
+	选中以后文本和选中线的样式
+*/
+#write .task-list-item input[type = "checkbox"]:checked + p {
+	text-decoration: line-through;
+	color: var(--selection-background-color);
+}
+
+
+/*
+	引用 设置
+*/
+#write blockquote {
+	color: var(--reference-color);
+	border-left: 0.25rem solid var(--split-color);
+	border-right: 0.25rem solid var(--split-color);
+	border-top: 0.25rem solid var(--split-color);
+	border-bottom: 0.25rem solid var(--split-color);
+	padding: 0.5rem 1rem 0.6rem 1rem;
+}
+#write blockquote::before {
+	display: block;
+	height: 2rem;
+	width: 1.5rem;
+	content: "✎";
+	font-size: 1.2rem;
+	color: var(--selection-background-color);
+	background: var(--selection-color);
+}
+
+/*
+	水平线设置
+*/
+#write hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	background-color: var(--split-color);
+	height: 0.13rem;
+	border: 0;
+}
+
+#write p {
+	font-size: 1rem;
+	line-height: 1.6rem;
+	margin-left: 4rem;
+}
+
+#write p:hover {
+	 /*color: var(--selection-background-color);
+	 font-size: 1.1rem;*/
+}
+
+/*
+	代码块设置
+*/
+#write .md-fences {
+	font-family: var(--monospace-font);
+	font-size: 1rem;
+	padding: 0.6rem;
+	background-color: var(--code-background-color);
+	border-radius: 0.4rem;
+	box-shadow: var(--block-shadow);
+}
+.md-fences {
+	background-color: var(--code-background-color);
+}
+/*
+	行内代码块
+*/
+code {
+  background-color: var(--code-background-color);
+  border-radius: 5px;
+  padding: 16px;
+  color: var(--code-color);
+}
+
+/*
+	公式设置
+*/
+#write mjx-container {
+	font-size: 1.1rem;
+}
+
+/*
+	它们是具有某些代码语言的特殊代码片段
+*/
+#write pre[lang=’sequence’], #write pre[lang=’flow’], #write pre[lang=’mermaid’] {
+	background-color: var(--code-background-color);
+	border-radius: 0.4rem;
+	box-shadow: var(--block-shadow);
+}
+
+/*
+	inline codes settings
+*/
+#write code {
+	font-family: var(--monospace-font);
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	padding: 0.05rem 0.3rem;
+	background-color: var(--code-background-color);
+	border-radius: 0.4rem;
+	box-shadow: 0.13rem 0.13rem 0.26rem var(--shadow-color);
+}
+
+/*
+	urls settings
+*/
+#write a {
+	color: var(--context-text-color);
+	text-decoration: none;
+}
+#write a:hover {
+	color: var(--a-hover-color);
+	text-decoration: none;	
+}
+#write a:before {
+	/*标题左边logo中的文本*/
+	content: "☁";
+	text-align: center;
+	/*设置 logo 垂直居中 要与字体高度一致方可*/
+	line-height: 1.6rem;
+	/*确保标题和logo在同一行*/
+	display: inline-block;
+	/*标题与logo间距*/
+	margin-right: 0.2em;
+	width: 1.6rem;
+	height: 1.6rem;
+	color: var(--h-sign);
+}
+
+/*
+	images settings
+*/
+#write img {
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: var(--block-shadow);
+}
+
+/*
+	高亮 == info ==
+*/
+#write mark {
+	background-color: var(--mark-color);
+}
+
+/*
+	被删除线修饰的文本样式 ~ ~ info ~ ~
+*/
+#write del {
+	color: var(--del-color);
+}
+
+/*
+	内容区选中后样式
+*/
+#write ::selection {
+	background-color: var(--selection-bg-color);
+}
+
+/*
+	自定义代码款下面选择高亮语法规则的样式
+*/
+.code-tooltip {
+	background-color: var(--code-background-color);
+	color: var(--code-color);
+}
+
+/*
+	自定义滚动条样式
+*/
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-hover-color);
+}
+
+
+
+/*
+  Name:       material
+  Author:     Mattia Astorino (http://github.com/equinusocio)
+  Website:    https://material-theme.site/
+*/
+
+.cm-s-inner.CodeMirror {
+  background-color: #282C34;
+  color: #EEFFFF;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+  background: #263238;
+  color: #546E7A;
+  border: none;
+}
+
+.cm-s-inner .CodeMirror-guttermarker,
+.cm-s-inner .CodeMirror-guttermarker-subtle,
+.cm-s-inner .CodeMirror-linenumber {
+  color: #546E7A;
+}
+
+.cm-s-inner .CodeMirror-cursor {
+  border-left: 1px solid #FFCC00;
+}
+.cm-s-inner.cm-fat-cursor .CodeMirror-cursor {
+  background-color: #5d6d5c80 !important;
+}
+.cm-s-inner .cm-animate-fat-cursor {
+  background-color: #5d6d5c80 !important;
+}
+
+.cm-s-inner div.CodeMirror-selected {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::selection {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner .CodeMirror-activeline-background {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cm-s-inner .cm-keyword {
+  color: #C792EA;
+}
+
+.cm-s-inner .cm-operator {
+  color: #89DDFF;
+}
+
+.cm-s-inner .cm-variable-2 {
+  color: #EEFFFF;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-builtin {
+  color: #FFCB6B;
+}
+
+.cm-s-inner .cm-atom {
+  color: #F78C6C;
+}
+
+.cm-s-inner .cm-number {
+  color: #FF5370;
+}
+
+.cm-s-inner .cm-def {
+  color: #82AAFF;
+}
+
+.cm-s-inner .cm-string {
+  color: #C3E88D;
+}
+
+.cm-s-inner .cm-string-2 {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-comment {
+  color: #546E7A;
+}
+
+.cm-s-inner .cm-variable {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-tag {
+  color: #FF5370;
+}
+
+.cm-s-inner .cm-meta {
+  color: #FFCB6B;
+}
+
+.cm-s-inner .cm-attribute {
+  color: #C792EA;
+}
+
+.cm-s-inner .cm-property {
+  color: #C792EA;
+}
+
+.cm-s-inner .cm-qualifier {
+  color: #DECB6B;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+  color: #DECB6B;
+}
+
+
+.cm-s-inner .cm-error {
+  color: rgba(255, 255, 255, 1.0);
+  background-color: #FF5370;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						}
+</style><title>Cheating Amidakuji</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p><a href='https://atcoder.jp/contests/abc279/tasks/abc279_e' target='_blank' class='url'>https://atcoder.jp/contests/abc279/tasks/abc279_e</a></p><h4 id='20mins'><span>20mins</span></h4><ul><li><p><span>如果是直接暴力，大模拟</span></p><ul><li><span>复杂度为： </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="6.974ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 3082.6 1083.9" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-18-TEX-I-1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path><path id="MJX-18-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-18-TEX-I-1D440" d="M289 629Q289 635 232 637Q208 637 201 638T194 648Q194 649 196 659Q197 662 198 666T199 671T201 676T203 679T207 681T212 683T220 683T232 684Q238 684 262 684T307 683Q386 683 398 683T414 678Q415 674 451 396L487 117L510 154Q534 190 574 254T662 394Q837 673 839 675Q840 676 842 678T846 681L852 683H948Q965 683 988 683T1017 684Q1051 684 1051 673Q1051 668 1048 656T1045 643Q1041 637 1008 637Q968 636 957 634T939 623Q936 618 867 340T797 59Q797 55 798 54T805 50T822 48T855 46H886Q892 37 892 35Q892 19 885 5Q880 0 869 0Q864 0 828 1T736 2Q675 2 644 2T609 1Q592 1 592 11Q592 13 594 25Q598 41 602 43T625 46Q652 46 685 49Q699 52 704 61Q706 65 742 207T813 490T848 631L654 322Q458 10 453 5Q451 4 449 3Q444 0 433 0Q418 0 415 7Q413 11 374 317L335 624L267 354Q200 88 200 79Q206 46 272 46H282Q288 41 289 37T286 19Q282 3 278 1Q274 0 267 0Q265 0 255 0T221 1T157 2Q127 2 95 1T58 0Q43 0 39 2T35 11Q35 13 38 25T43 40Q45 46 65 46Q135 46 154 86Q158 92 223 354T289 629Z"></path><path id="MJX-18-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-18-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D442" xlink:href="#MJX-18-TEX-I-1D442"></use></g><g data-mml-node="mo" transform="translate(763,0)"><use data-c="28" xlink:href="#MJX-18-TEX-N-28"></use></g><g data-mml-node="msup" transform="translate(1152,0)"><g data-mml-node="mi"><use data-c="1D440" xlink:href="#MJX-18-TEX-I-1D440"></use></g><g data-mml-node="mn" transform="translate(1138,363) scale(0.707)"><use data-c="32" xlink:href="#MJX-18-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(2693.6,0)"><use data-c="29" xlink:href="#MJX-18-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msup><mi>M</mi><mn>2</mn></msup><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">O(M^2)</script></li></ul></li><li><p><span>发现一些性质。</span></p><ul><li><span>操作数在它之前，那么1后退一步。</span></li><li><span>操作数就是本身，后退一步。</span></li><li><span>1初始在首位。</span></li></ul></li></ul><h4 id='解决方法'><span>解决方法</span></h4><ul><li><span>反过来想：</span></li><li><span>大佬代码在这里。（jly的代码）</span></li></ul><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="cpp" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="cpp"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.42578px; left: 40.9896px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 37px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -36.9922px; width: 37px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;bits/stdc++.h&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">using</span> <span class="cm-variable">i64</span> <span class="cm-operator">=</span> <span class="cm-variable-3">long</span> <span class="cm-variable-3">long</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-def">main</span>() {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">std::ios::sync_with_stdio</span>(<span class="cm-atom">false</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">std::cin</span>.<span class="cm-variable">tie</span>(<span class="cm-keyword">nullptr</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable-3">int</span> <span class="cm-variable">N</span>, <span class="cm-variable">M</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">std::cin</span> <span class="cm-operator">&gt;&gt;</span> <span class="cm-variable">N</span> <span class="cm-operator">&gt;&gt;</span> <span class="cm-variable">M</span>;</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">std::vector</span><span class="cm-operator">&lt;</span><span class="cm-variable-3">int</span><span class="cm-operator">&gt;</span> <span class="cm-variable">A</span>(<span class="cm-variable">M</span>);</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">for</span> (<span class="cm-variable-3">int</span> <span class="cm-variable">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">M</span>; <span class="cm-variable">i</span><span class="cm-operator">++</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">std::cin</span> <span class="cm-operator">&gt;&gt;</span> <span class="cm-variable">A</span>[<span class="cm-variable">i</span>];</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">A</span>[<span class="cm-variable">i</span>]<span class="cm-operator">--</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">std::vector</span><span class="cm-operator">&lt;</span><span class="cm-variable-3">int</span><span class="cm-operator">&gt;</span> <span class="cm-variable">P</span>(<span class="cm-variable">N</span>), <span class="cm-variable">Q</span>(<span class="cm-variable">N</span>), <span class="cm-variable">Pi</span>(<span class="cm-variable">N</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">std::iota</span>(<span class="cm-variable">P</span>.<span class="cm-variable">begin</span>(), <span class="cm-variable">P</span>.<span class="cm-variable">end</span>(), <span class="cm-number">0</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">Q</span> <span class="cm-operator">=</span> <span class="cm-variable">Pi</span> <span class="cm-operator">=</span> <span class="cm-variable">P</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">for</span> (<span class="cm-variable-3">int</span> <span class="cm-variable">i</span> <span class="cm-operator">=</span> <span class="cm-variable">M</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>; <span class="cm-variable">i</span> <span class="cm-operator">&gt;=</span> <span class="cm-number">0</span>; <span class="cm-variable">i</span><span class="cm-operator">--</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">std::swap</span>(<span class="cm-variable">Q</span>[<span class="cm-variable">A</span>[<span class="cm-variable">i</span>]], <span class="cm-variable">Q</span>[<span class="cm-variable">A</span>[<span class="cm-variable">i</span>] <span class="cm-operator">+</span> <span class="cm-number">1</span>]);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">//第一个问题，这里先对一个逆反的操作。</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">Q</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">for</span> (<span class="cm-variable-3">int</span> <span class="cm-variable">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">M</span>; <span class="cm-variable">i</span><span class="cm-operator">++</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">std::swap</span>(<span class="cm-variable">Q</span>[<span class="cm-variable">A</span>[<span class="cm-variable">i</span>]], <span class="cm-variable">Q</span>[<span class="cm-variable">A</span>[<span class="cm-variable">i</span>] <span class="cm-operator">+</span> <span class="cm-number">1</span>]);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">std::cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">Q</span>[<span class="cm-variable">P</span>[<span class="cm-number">0</span>]] <span class="cm-operator">+</span> <span class="cm-number">1</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"\n"</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">std::swap</span>(<span class="cm-variable">P</span>[<span class="cm-variable">Pi</span>[<span class="cm-variable">A</span>[<span class="cm-variable">i</span>]]], <span class="cm-variable">P</span>[<span class="cm-variable">Pi</span>[<span class="cm-variable">A</span>[<span class="cm-variable">i</span>] <span class="cm-operator">+</span> <span class="cm-number">1</span>]]);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">std::swap</span>(<span class="cm-variable">Pi</span>[<span class="cm-variable">A</span>[<span class="cm-variable">i</span>]], <span class="cm-variable">Pi</span>[<span class="cm-variable">A</span>[<span class="cm-variable">i</span>] <span class="cm-operator">+</span> <span class="cm-number">1</span>]);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-number">0</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -36.9922px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 777px;"></div><div class="CodeMirror-gutters" style="height: 777px; left: 0.0078125px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 37px;"></div></div></div></div></pre><ul><li><p><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="13.153ex" height="1.946ex" role="img" focusable="false" viewBox="0 -666 5813.8 860" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-19-TEX-I-1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path><path id="MJX-19-TEX-I-1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-19-TEX-I-1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path><path id="MJX-19-TEX-I-1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path id="MJX-19-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path id="MJX-19-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-19-TEX-I-1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path><path id="MJX-19-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-19-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-19-TEX-N-3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D45E" xlink:href="#MJX-19-TEX-I-1D45E"></use></g><g data-mml-node="mi" transform="translate(460,0)"><use data-c="1D462" xlink:href="#MJX-19-TEX-I-1D462"></use></g><g data-mml-node="mi" transform="translate(1032,0)"><use data-c="1D452" xlink:href="#MJX-19-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(1498,0)"><use data-c="1D460" xlink:href="#MJX-19-TEX-I-1D460"></use></g><g data-mml-node="mi" transform="translate(1967,0)"><use data-c="1D461" xlink:href="#MJX-19-TEX-I-1D461"></use></g><g data-mml-node="mi" transform="translate(2328,0)"><use data-c="1D456" xlink:href="#MJX-19-TEX-I-1D456"></use></g><g data-mml-node="mi" transform="translate(2673,0)"><use data-c="1D45C" xlink:href="#MJX-19-TEX-I-1D45C"></use></g><g data-mml-node="mi" transform="translate(3158,0)"><use data-c="1D45B" xlink:href="#MJX-19-TEX-I-1D45B"></use></g><g data-mml-node="mstyle" transform="translate(3758,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="mn" transform="translate(4758,0)"><use data-c="31" xlink:href="#MJX-19-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(5535.8,0)"><use data-c="3A" xlink:href="#MJX-19-TEX-N-3A"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi><mi>u</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mstyle scriptlevel="0"><mspace width="1em"></mspace></mstyle><mn>1</mn><mo>:</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">question\quad1:</script><span>——定义出来的三个结构的意义是什么？</span></p><ul><li><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="7.98ex" height="2.032ex" role="img" focusable="false" viewBox="0 -704 3527.3 898" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-20-TEX-I-1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"></path><path id="MJX-20-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-20-TEX-I-1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path><path id="MJX-20-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D444" xlink:href="#MJX-20-TEX-I-1D444"></use></g><g data-mml-node="mo" transform="translate(791,0)"><use data-c="2C" xlink:href="#MJX-20-TEX-N-2C"></use></g><g data-mml-node="mi" transform="translate(1235.7,0)"><use data-c="1D443" xlink:href="#MJX-20-TEX-I-1D443"></use></g><g data-mml-node="mo" transform="translate(1986.7,0)"><use data-c="2C" xlink:href="#MJX-20-TEX-N-2C"></use></g><g data-mml-node="mi" transform="translate(2431.3,0)"><use data-c="1D443" xlink:href="#MJX-20-TEX-I-1D443"></use></g><g data-mml-node="mi" transform="translate(3182.3,0)"><use data-c="1D456" xlink:href="#MJX-20-TEX-I-1D456"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi><mo>,</mo><mi>P</mi><mo>,</mo><mi>P</mi><mi>i</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">Q,P,Pi</script></li></ul></li><li><p><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="13.153ex" height="1.946ex" role="img" focusable="false" viewBox="0 -666 5813.8 860" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-21-TEX-I-1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path><path id="MJX-21-TEX-I-1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-21-TEX-I-1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path><path id="MJX-21-TEX-I-1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path id="MJX-21-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path id="MJX-21-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-21-TEX-I-1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path><path id="MJX-21-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-21-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-21-TEX-N-3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D45E" xlink:href="#MJX-21-TEX-I-1D45E"></use></g><g data-mml-node="mi" transform="translate(460,0)"><use data-c="1D462" xlink:href="#MJX-21-TEX-I-1D462"></use></g><g data-mml-node="mi" transform="translate(1032,0)"><use data-c="1D452" xlink:href="#MJX-21-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(1498,0)"><use data-c="1D460" xlink:href="#MJX-21-TEX-I-1D460"></use></g><g data-mml-node="mi" transform="translate(1967,0)"><use data-c="1D461" xlink:href="#MJX-21-TEX-I-1D461"></use></g><g data-mml-node="mi" transform="translate(2328,0)"><use data-c="1D456" xlink:href="#MJX-21-TEX-I-1D456"></use></g><g data-mml-node="mi" transform="translate(2673,0)"><use data-c="1D45C" xlink:href="#MJX-21-TEX-I-1D45C"></use></g><g data-mml-node="mi" transform="translate(3158,0)"><use data-c="1D45B" xlink:href="#MJX-21-TEX-I-1D45B"></use></g><g data-mml-node="mstyle" transform="translate(3758,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="mn" transform="translate(4758,0)"><use data-c="32" xlink:href="#MJX-21-TEX-N-32"></use></g><g data-mml-node="mo" transform="translate(5535.8,0)"><use data-c="3A" xlink:href="#MJX-21-TEX-N-3A"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>q</mi><mi>u</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mstyle scriptlevel="0"><mspace width="1em"></mspace></mstyle><mn>2</mn><mo>:</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">question\quad2:</script><span>一些非常特别的操作。</span></p><ul><li><span>为什么先做一个逆向的操作？</span></li><li><span>ans=</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="11.033ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4876.4 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-22-TEX-I-1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"></path><path id="MJX-22-TEX-N-5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"></path><path id="MJX-22-TEX-I-1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path><path id="MJX-22-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-22-TEX-N-5D" d="M22 710V750H159V-250H22V-210H119V710H22Z"></path><path id="MJX-22-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-22-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D444" xlink:href="#MJX-22-TEX-I-1D444"></use></g><g data-mml-node="mo" transform="translate(791,0)"><use data-c="5B" xlink:href="#MJX-22-TEX-N-5B"></use></g><g data-mml-node="mi" transform="translate(1069,0)"><use data-c="1D443" xlink:href="#MJX-22-TEX-I-1D443"></use></g><g data-mml-node="mo" transform="translate(1820,0)"><use data-c="5B" xlink:href="#MJX-22-TEX-N-5B"></use></g><g data-mml-node="mn" transform="translate(2098,0)"><use data-c="30" xlink:href="#MJX-22-TEX-N-30"></use></g><g data-mml-node="mo" transform="translate(2598,0)"><use data-c="5D" xlink:href="#MJX-22-TEX-N-5D"></use></g><g data-mml-node="mo" transform="translate(2876,0)"><use data-c="5D" xlink:href="#MJX-22-TEX-N-5D"></use></g><g data-mml-node="mo" transform="translate(3376.2,0)"><use data-c="2B" xlink:href="#MJX-22-TEX-N-2B"></use></g><g data-mml-node="mn" transform="translate(4376.4,0)"><use data-c="31" xlink:href="#MJX-22-TEX-N-31"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi><mo stretchy="false">[</mo><mi>P</mi><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo><mo stretchy="false">]</mo><mo>+</mo><mn>1</mn></math></mjx-assistive-mml></mjx-container><script type="math/tex">Q[P[0]]+1</script><span>。 </span></li></ul></li></ul><h4 id='日常破防时刻'><span>日常破防时刻：</span></h4><ul><li><span>太抽象了，这一类问题。</span></li><li><span>一点进展都没有，一天下来什么都做不了。</span></li><li><span>每次比赛都是突破不了自己。</span></li><li><span>最终无法站得更加高。</span></li></ul><p>&nbsp;</p><h4 id='日常破完防之后继续认真想'><span>日常破完防之后，继续认真想：</span></h4><ul><li><p><span>突然发现，当时1得方向是不能简单计算得到得。但是可以计算，操作之后各个位置最终出现得情况。</span></p><ul><li><span>如果知道了1在哪一个位置，也就可以知道了进行了后面的操作之后得位置了。</span></li><li><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="62.29ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 27532 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-23-TEX-I-1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"></path><path id="MJX-23-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-23-TEX-I-1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path><path id="MJX-23-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-23-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D444" xlink:href="#MJX-23-TEX-I-1D444"></use></g><g data-mml-node="mo" transform="translate(791,0)"><use data-c="28" xlink:href="#MJX-23-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(1180,0)"><use data-c="1D458" xlink:href="#MJX-23-TEX-I-1D458"></use></g><g data-mml-node="mi" transform="translate(1701,0)"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">，</text></g><g data-mml-node="mi" transform="translate(2585,0)"><use data-c="1D456" xlink:href="#MJX-23-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(2930,0)"><use data-c="29" xlink:href="#MJX-23-TEX-N-29"></use></g><g data-mml-node="mtext" transform="translate(3319,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">为</text></g><g data-mml-node="mtext" transform="translate(4203,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">经</text></g><g data-mml-node="mtext" transform="translate(5087,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">过</text></g><g data-mml-node="mtext" transform="translate(5971,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">后</text></g><g data-mml-node="mtext" transform="translate(6855,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">面</text></g><g data-mml-node="mtext" transform="translate(7739,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">一</text></g><g data-mml-node="mtext" transform="translate(8623,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">大</text></g><g data-mml-node="mtext" transform="translate(9507,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">段</text></g><g data-mml-node="mtext" transform="translate(10391,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">变</text></g><g data-mml-node="mtext" transform="translate(11275,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">化</text></g><g data-mml-node="mtext" transform="translate(12159,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">之</text></g><g data-mml-node="mtext" transform="translate(13043,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">后</text></g><g data-mml-node="mi" transform="translate(13927,0)"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">，</text></g><g data-mml-node="mi" transform="translate(14811,0)"><use data-c="1D456" xlink:href="#MJX-23-TEX-I-1D456"></use></g><g data-mml-node="mtext" transform="translate(15156,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">位</text></g><g data-mml-node="mtext" transform="translate(16040,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">置</text></g><g data-mml-node="mtext" transform="translate(16924,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">上</text></g><g data-mml-node="mtext" transform="translate(17808,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mtext" transform="translate(18692,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">元</text></g><g data-mml-node="mtext" transform="translate(19576,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">素</text></g><g data-mml-node="mtext" transform="translate(20460,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">最</text></g><g data-mml-node="mtext" transform="translate(21344,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">终</text></g><g data-mml-node="mtext" transform="translate(22228,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">出</text></g><g data-mml-node="mtext" transform="translate(23112,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">现</text></g><g data-mml-node="mtext" transform="translate(23996,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mtext" transform="translate(24880,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">位</text></g><g data-mml-node="mtext" transform="translate(25764,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">置</text></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(26648,0)"><g data-mml-node="mo"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">。</text></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi><mo stretchy="false">(</mo><mi>k</mi><mi>，</mi><mi>i</mi><mo stretchy="false">)</mo><mtext>为</mtext><mtext>经</mtext><mtext>过</mtext><mtext>后</mtext><mtext>面</mtext><mtext>一</mtext><mtext>大</mtext><mtext>段</mtext><mtext>变</mtext><mtext>化</mtext><mtext>之</mtext><mtext>后</mtext><mi>，</mi><mi>i</mi><mtext>位</mtext><mtext>置</mtext><mtext>上</mtext><mtext>的</mtext><mtext>元</mtext><mtext>素</mtext><mtext>最</mtext><mtext>终</mtext><mtext>出</mtext><mtext>现</mtext><mtext>的</mtext><mtext>位</mtext><mtext>置</mtext><mrow data-mjx-texclass="ORD"><mo>。</mo></mrow></math></mjx-assistive-mml></mjx-container><script type="math/tex">Q(k，i)为经过后面一大段变化之后，i位置上的元素最终出现的位置。</script></li><li><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="52.199ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 23072 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-24-TEX-I-1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path><path id="MJX-24-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-24-TEX-I-1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path><path id="MJX-24-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-24-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D443" xlink:href="#MJX-24-TEX-I-1D443"></use></g><g data-mml-node="mo" transform="translate(751,0)"><use data-c="28" xlink:href="#MJX-24-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(1140,0)"><use data-c="1D458" xlink:href="#MJX-24-TEX-I-1D458"></use></g><g data-mml-node="mi" transform="translate(1661,0)"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">，</text></g><g data-mml-node="mi" transform="translate(2545,0)"><use data-c="1D456" xlink:href="#MJX-24-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(2890,0)"><use data-c="29" xlink:href="#MJX-24-TEX-N-29"></use></g><g data-mml-node="mtext" transform="translate(3279,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">为</text></g><g data-mml-node="mtext" transform="translate(4163,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">初</text></g><g data-mml-node="mtext" transform="translate(5047,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">始</text></g><g data-mml-node="mtext" transform="translate(5931,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">状</text></g><g data-mml-node="mtext" transform="translate(6815,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">态</text></g><g data-mml-node="mtext" transform="translate(7699,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">下</text></g><g data-mml-node="mtext" transform="translate(8583,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">进</text></g><g data-mml-node="mtext" transform="translate(9467,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">行</text></g><g data-mml-node="mtext" transform="translate(10351,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">前</text></g><g data-mml-node="mtext" transform="translate(11235,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">若</text></g><g data-mml-node="mtext" transform="translate(12119,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">干</text></g><g data-mml-node="mtext" transform="translate(13003,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">次</text></g><g data-mml-node="mtext" transform="translate(13887,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">次</text></g><g data-mml-node="mtext" transform="translate(14771,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">操</text></g><g data-mml-node="mtext" transform="translate(15655,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">作</text></g><g data-mml-node="mtext" transform="translate(16539,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">之</text></g><g data-mml-node="mtext" transform="translate(17423,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">后</text></g><g data-mml-node="mi" transform="translate(18307,0)"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">，</text></g><g data-mml-node="mi" transform="translate(19191,0)"><use data-c="1D456" xlink:href="#MJX-24-TEX-I-1D456"></use></g><g data-mml-node="mtext" transform="translate(19536,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mtext" transform="translate(20420,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">位</text></g><g data-mml-node="mtext" transform="translate(21304,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">置</text></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(22188,0)"><g data-mml-node="mo"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">。</text></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mo stretchy="false">(</mo><mi>k</mi><mi>，</mi><mi>i</mi><mo stretchy="false">)</mo><mtext>为</mtext><mtext>初</mtext><mtext>始</mtext><mtext>状</mtext><mtext>态</mtext><mtext>下</mtext><mtext>进</mtext><mtext>行</mtext><mtext>前</mtext><mtext>若</mtext><mtext>干</mtext><mtext>次</mtext><mtext>次</mtext><mtext>操</mtext><mtext>作</mtext><mtext>之</mtext><mtext>后</mtext><mi>，</mi><mi>i</mi><mtext>的</mtext><mtext>位</mtext><mtext>置</mtext><mrow data-mjx-texclass="ORD"><mo>。</mo></mrow></math></mjx-assistive-mml></mjx-container><script type="math/tex">P(k，i)为初始状态下进行前若干次次操作之后，i的位置。</script></li></ul></li><li><p><span>关于怎么计算这两个函数的问题：</span></p><ul><li><p><span>对于</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="4.33ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1914 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-25-TEX-I-1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"></path><path id="MJX-25-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-25-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-25-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D444" xlink:href="#MJX-25-TEX-I-1D444"></use></g><g data-mml-node="mo" transform="translate(791,0)"><use data-c="28" xlink:href="#MJX-25-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(1180,0)"><use data-c="1D456" xlink:href="#MJX-25-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(1525,0)"><use data-c="29" xlink:href="#MJX-25-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">Q(i)</script><span>可以发现。过程中某一个状态的B的情况。如果当前的，如果当前</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="14.322ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 6330.1 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-26-TEX-I-1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path><path id="MJX-26-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-26-TEX-I-1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path><path id="MJX-26-TEX-N-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path id="MJX-26-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-26-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-26-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-26-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D443" xlink:href="#MJX-26-TEX-I-1D443"></use></g><g data-mml-node="mo" transform="translate(751,0)"><use data-c="28" xlink:href="#MJX-26-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(1140,0)"><use data-c="1D458" xlink:href="#MJX-26-TEX-I-1D458"></use></g><g data-mml-node="mo" transform="translate(1883.2,0)"><use data-c="2212" xlink:href="#MJX-26-TEX-N-2212"></use></g><g data-mml-node="mn" transform="translate(2883.4,0)"><use data-c="31" xlink:href="#MJX-26-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(3383.4,0)"><use data-c="2C" xlink:href="#MJX-26-TEX-N-2C"></use></g><g data-mml-node="mi" transform="translate(3828.1,0)"><use data-c="1D456" xlink:href="#MJX-26-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(4173.1,0)"><use data-c="29" xlink:href="#MJX-26-TEX-N-29"></use></g><g data-mml-node="mtext" transform="translate(4562.1,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">为</text></g><g data-mml-node="mtext" transform="translate(5446.1,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">真</text></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mo stretchy="false">(</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>i</mi><mo stretchy="false">)</mo><mtext>为</mtext><mtext>真</mtext></math></mjx-assistive-mml></mjx-container><script type="math/tex">P(k-1,i)为真</script><span>第k此操作下，两个元素互相改变位置。通过过程模拟记录，可以得到哪两个数字在进行交换位置。于是</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="36.254ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 16024.4 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-27-TEX-I-1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path id="MJX-27-TEX-I-1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path><path id="MJX-27-TEX-I-1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path id="MJX-27-TEX-I-1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path><path id="MJX-27-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-27-TEX-I-1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path><path id="MJX-27-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-27-TEX-I-1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path><path id="MJX-27-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-27-TEX-I-1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path id="MJX-27-TEX-N-5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"></path><path id="MJX-27-TEX-N-5D" d="M22 710V750H159V-250H22V-210H119V710H22Z"></path><path id="MJX-27-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-27-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-27-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D460" xlink:href="#MJX-27-TEX-I-1D460"></use></g><g data-mml-node="mi" transform="translate(469,0)"><use data-c="1D464" xlink:href="#MJX-27-TEX-I-1D464"></use></g><g data-mml-node="mi" transform="translate(1185,0)"><use data-c="1D44E" xlink:href="#MJX-27-TEX-I-1D44E"></use></g><g data-mml-node="mi" transform="translate(1714,0)"><use data-c="1D45D" xlink:href="#MJX-27-TEX-I-1D45D"></use></g><g data-mml-node="mo" transform="translate(2217,0)"><use data-c="28" xlink:href="#MJX-27-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(2606,0)"><use data-c="1D443" xlink:href="#MJX-27-TEX-I-1D443"></use></g><g data-mml-node="mo" transform="translate(3357,0)"><use data-c="28" xlink:href="#MJX-27-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(3746,0)"><use data-c="1D443" xlink:href="#MJX-27-TEX-I-1D443"></use></g><g data-mml-node="mi" transform="translate(4497,0)"><use data-c="1D456" xlink:href="#MJX-27-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(4842,0)"><use data-c="28" xlink:href="#MJX-27-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(5231,0)"><use data-c="1D458" xlink:href="#MJX-27-TEX-I-1D458"></use></g><g data-mml-node="mo" transform="translate(5752,0)"><use data-c="2C" xlink:href="#MJX-27-TEX-N-2C"></use></g><g data-mml-node="mi" transform="translate(6196.7,0)"><use data-c="1D434" xlink:href="#MJX-27-TEX-I-1D434"></use></g><g data-mml-node="mo" transform="translate(6946.7,0)"><use data-c="5B" xlink:href="#MJX-27-TEX-N-5B"></use></g><g data-mml-node="mi" transform="translate(7224.7,0)"><use data-c="1D458" xlink:href="#MJX-27-TEX-I-1D458"></use></g><g data-mml-node="mo" transform="translate(7745.7,0)"><use data-c="5D" xlink:href="#MJX-27-TEX-N-5D"></use></g><g data-mml-node="mo" transform="translate(8023.7,0)"><use data-c="29" xlink:href="#MJX-27-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(8412.7,0)"><use data-c="2C" xlink:href="#MJX-27-TEX-N-2C"></use></g><g data-mml-node="mi" transform="translate(8857.3,0)"><use data-c="1D443" xlink:href="#MJX-27-TEX-I-1D443"></use></g><g data-mml-node="mi" transform="translate(9608.3,0)"><use data-c="1D456" xlink:href="#MJX-27-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(9953.3,0)"><use data-c="28" xlink:href="#MJX-27-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(10342.3,0)"><use data-c="1D458" xlink:href="#MJX-27-TEX-I-1D458"></use></g><g data-mml-node="mo" transform="translate(10863.3,0)"><use data-c="2C" xlink:href="#MJX-27-TEX-N-2C"></use></g><g data-mml-node="mi" transform="translate(11308,0)"><use data-c="1D434" xlink:href="#MJX-27-TEX-I-1D434"></use></g><g data-mml-node="mo" transform="translate(12058,0)"><use data-c="5B" xlink:href="#MJX-27-TEX-N-5B"></use></g><g data-mml-node="mi" transform="translate(12336,0)"><use data-c="1D458" xlink:href="#MJX-27-TEX-I-1D458"></use></g><g data-mml-node="mo" transform="translate(12857,0)"><use data-c="5D" xlink:href="#MJX-27-TEX-N-5D"></use></g><g data-mml-node="mo" transform="translate(13357.2,0)"><use data-c="2B" xlink:href="#MJX-27-TEX-N-2B"></use></g><g data-mml-node="mn" transform="translate(14357.4,0)"><use data-c="31" xlink:href="#MJX-27-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(14857.4,0)"><use data-c="29" xlink:href="#MJX-27-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(15246.4,0)"><use data-c="29" xlink:href="#MJX-27-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(15635.4,0)"><use data-c="29" xlink:href="#MJX-27-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mi>w</mi><mi>a</mi><mi>p</mi><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">(</mo><mi>P</mi><mi>i</mi><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>A</mi><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>,</mo><mi>P</mi><mi>i</mi><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>A</mi><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">swap(P(Pi(k,A[k]),Pi(k,A[k]+1)))</script><span>，得到当前状态下，每一个元素的位置。</span></p></li><li><p><span>对于</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="6.425ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2839.7 1000" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.566ex;"><defs><path id="MJX-28-TEX-I-1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path><path id="MJX-28-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-28-TEX-I-1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path><path id="MJX-28-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-28-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-28-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D443" xlink:href="#MJX-28-TEX-I-1D443"></use></g><g data-mml-node="mo" transform="translate(751,0)"><use data-c="28" xlink:href="#MJX-28-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(1140,0)"><use data-c="1D458" xlink:href="#MJX-28-TEX-I-1D458"></use></g><g data-mml-node="mo" transform="translate(1661,0)"><use data-c="2C" xlink:href="#MJX-28-TEX-N-2C"></use></g><g data-mml-node="mi" transform="translate(2105.7,0)"><use data-c="1D456" xlink:href="#MJX-28-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(2450.7,0)"><use data-c="29" xlink:href="#MJX-28-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>i</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">P(k,i)</script><span>，假设最终状态为</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="8.273ex" height="1.946ex" role="img" focusable="false" viewBox="0 -666 3656.7 860" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-29-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-29-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-29-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-29-TEX-N-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path><path id="MJX-29-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-29-TEX-N-31"></use></g><g data-mml-node="mo" transform="translate(500,0)"><use data-c="2C" xlink:href="#MJX-29-TEX-N-2C"></use></g><g data-mml-node="mn" transform="translate(944.7,0)"><use data-c="32" xlink:href="#MJX-29-TEX-N-32"></use><use data-c="2E" xlink:href="#MJX-29-TEX-N-2E" transform="translate(500,0)"></use></g><g data-mml-node="mo" transform="translate(1722.7,0)"><use data-c="2E" xlink:href="#MJX-29-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(2167.3,0)"><use data-c="2E" xlink:href="#MJX-29-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(2612,0)"><use data-c="2E" xlink:href="#MJX-29-TEX-N-2E"></use></g><g data-mml-node="mi" transform="translate(3056.7,0)"><use data-c="1D45B" xlink:href="#MJX-29-TEX-I-1D45B"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>,</mo><mn>2.</mn><mo>.</mo><mo>.</mo><mo>.</mo><mi>n</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">1,2....n</script><span>发现，逆着进行</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-30-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D45B" xlink:href="#MJX-30-TEX-I-1D45B"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">n</script><span>次操作之后。得到的一个序列为 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="13.305ex" height="1.984ex" role="img" focusable="false" viewBox="0 -683 5880.7 877" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-31-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path><path id="MJX-31-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-31-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-31-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-31-TEX-N-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path><path id="MJX-31-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D435" xlink:href="#MJX-31-TEX-I-1D435"></use></g><g data-mml-node="mn" transform="translate(792,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-31-TEX-N-31"></use></g></g><g data-mml-node="mo" transform="translate(1195.6,0)"><use data-c="2C" xlink:href="#MJX-31-TEX-N-2C"></use></g><g data-mml-node="msub" transform="translate(1640.2,0)"><g data-mml-node="mi"><use data-c="1D435" xlink:href="#MJX-31-TEX-I-1D435"></use></g><g data-mml-node="mn" transform="translate(792,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-31-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(2835.8,0)"><use data-c="2E" xlink:href="#MJX-31-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(3280.4,0)"><use data-c="2E" xlink:href="#MJX-31-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(3725.1,0)"><use data-c="2E" xlink:href="#MJX-31-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(4169.8,0)"><use data-c="2E" xlink:href="#MJX-31-TEX-N-2E"></use></g><g data-mml-node="msub" transform="translate(4614.4,0)"><g data-mml-node="mi"><use data-c="1D435" xlink:href="#MJX-31-TEX-I-1D435"></use></g><g data-mml-node="mi" transform="translate(792,-150) scale(0.707)"><use data-c="1D45B" xlink:href="#MJX-31-TEX-I-1D45B"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>B</mi><mn>1</mn></msub><mo>,</mo><msub><mi>B</mi><mn>2</mn></msub><mo>.</mo><mo>.</mo><mo>.</mo><mo>.</mo><msub><mi>B</mi><mi>n</mi></msub></math></mjx-assistive-mml></mjx-container><script type="math/tex">B_1,B_2....B_n</script><span>。</span></p><ul><li><p><span>结论如下： </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="2.738ex" height="1.902ex" role="img" focusable="false" viewBox="0 -683 1210.4 840.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.357ex;"><defs><path id="MJX-32-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path><path id="MJX-32-TEX-I-1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D435" xlink:href="#MJX-32-TEX-I-1D435"></use></g><g data-mml-node="mi" transform="translate(792,-150) scale(0.707)"><use data-c="1D458" xlink:href="#MJX-32-TEX-I-1D458"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>B</mi><mi>k</mi></msub></math></mjx-assistive-mml></mjx-container><script type="math/tex">B_k</script><span>所保存的数字，就是当前位置上元素在经过后面的操作之后，来到的位置。</span></p><ol start='' ><li><p><span>证明如下：</span></p><ol start='' ><li><span>假设</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="3.561ex" height="2.211ex" role="img" focusable="false" viewBox="0 -683 1573.9 977.2" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.666ex;"><defs><path id="MJX-33-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path><path id="MJX-33-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-33-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-33-TEX-I-1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D435" xlink:href="#MJX-33-TEX-I-1D435"></use></g><g data-mml-node="TeXAtom" transform="translate(792,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="1D456" xlink:href="#MJX-33-TEX-I-1D456"></use></g><g data-mml-node="mo" transform="translate(345,0)"><use data-c="2C" xlink:href="#MJX-33-TEX-N-2C"></use></g><g data-mml-node="mi" transform="translate(623,0)"><use data-c="1D457" xlink:href="#MJX-33-TEX-I-1D457"></use></g></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>B</mi><mrow data-mjx-texclass="ORD"><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></math></mjx-assistive-mml></mjx-container><script type="math/tex">B_{i,j}</script><span>表示当前的情况是第 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="2.781ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 1229 950" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.452ex;"><defs><path id="MJX-34-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D456" xlink:href="#MJX-34-TEX-I-1D456"></use></g><g data-mml-node="mtext" transform="translate(345,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">次</text></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mtext>次</mtext></math></mjx-assistive-mml></mjx-container><script type="math/tex">i次</script><span> 操作后的情况。</span></li><li><span>当 i=1 ：最小规模，显然成立。</span></li><li><span>若对于更小规模的结果，满足上述关系。对于下一步规模更大的情况。体会一下也是成立的。</span>🙂</li></ol></li></ol></li></ul></li></ul></li></ul><hr /><p><span>         </span></p></div></div>
+</body>
+</html>

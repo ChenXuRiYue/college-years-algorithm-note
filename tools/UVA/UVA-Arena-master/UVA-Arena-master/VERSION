@@ -1,0 +1,5 @@
+{
+	"version": "1.9.1",
+	"link": "https://sourceforge.net/projects/uvaarena/files/UVA_Arena_1.9/UVA_Arena_1.9.1.exe",
+	"message": "Fix mingw compiler path."
+}
